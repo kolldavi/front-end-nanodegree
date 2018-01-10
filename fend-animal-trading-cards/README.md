@@ -1,3 +1,5 @@
-#Udacity fend animal trading card game
+# Udacity fend animal trading card game
 
-<img src="https://raw.githubusercontent.com/kolldavi/front-end-nanodegree/fend-animal-trading-cards/master/ScreenShot.png?raw=true" />
+#### First project in front end development nanodegree
+
+<img src="https://raw.githubusercontent.com/kolldavi/front-end-nanodegree/master/fend-animal-trading-cards/ScreenShot.png" />
