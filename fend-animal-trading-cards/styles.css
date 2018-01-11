@@ -1,17 +1,28 @@
-/* add your CSS here */
 * {
   font-family: 'Gill Sans', sans-serif;
 }
 
-.header {
-  padding-left: 10px;
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-
+polygon {
+  fill: yellow;
+}
+.stars {
+  padding-left: 25%;
+  padding-right: 5%;
+}
+#photo {
+  width: 300px;
+  height: 200px;
+}
 .card {
   border: 1px solid #888;
   width: 350px;
   box-shadow: 5px 5px 2px 2px #d5d3d3;
-  border-radius: 1%;
+  border-radius: 5px;
 
   /*created using http://www.colorzilla.com/gradient-editor/*/
   background: rgb(235, 241, 246); /* Old browsers */
