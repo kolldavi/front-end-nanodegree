@@ -1,0 +1,11 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+    I am becoming better at reading docs
+  * What has been easy?
+    creating a page without any css
+  * What has been difficult?
+    Sometimes it is hard to stop and looking up things when you don't remember and I waste time just typing stuff in that doesn't work.
+
+---
+
+Your response goes here!
