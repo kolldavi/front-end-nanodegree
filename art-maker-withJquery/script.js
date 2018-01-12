@@ -16,9 +16,14 @@ function updateColorPicker() {
 }
 //create grid
 function makeGrid() {
-  let rowNum = $('#grid-height').val();
-  let colNum = $('#grid-width').val();
-
+  let rowNum = $('#grid-cols').val();
+  let colNum = $('#grid-rows').val();
+  const e = document.getElementById('error');
+  if (rowNum < 1 || rowNum > 200 || colNum < 1 || colNum > 200) {
+    e.innerHTML = 'cols and rows must be between 1 and 200';
+    return false;
+  }
+  e.innerHTML = '';
   //get the table
   var table = $('#pixel-canvas');
   //Reset to empty table --- in case one already created

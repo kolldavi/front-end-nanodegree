@@ -1,7 +1,7 @@
 //set defaults
 let color = 'black',
-  width,
-  height;
+  rows,
+  cols;
 
 //get table
 let table = document.getElementById('pixel-canvas');
@@ -12,20 +12,20 @@ function updateColorPicker() {
 }
 
 function makeGrid() {
-  width = document.getElementById('grid-width').value;
-  height = document.getElementById('grid-height').value;
+  rows = document.getElementById('grid-rows').value;
+  cols = document.getElementById('grid-cols').value;
   var e = document.getElementById('error');
-  if (width < 1 || width > 200 || height < 1 || height > 200) {
-    e.innerHTML = 'height and width must be between 1 and 200';
+  if (rows < 1 || rows > 200 || cols < 1 || cols > 200) {
+    e.innerHTML = 'cols and rows must be between 1 and 200';
     return false;
   } else {
     e.innerHTML = '';
     table.innerHTML = '';
-    for (let i = 0; i < height; i++) {
+    for (let i = 0; i < cols; i++) {
       let row = document.createElement('tr');
       //Create rows
       table.appendChild(row);
-      for (let j = 0; j < width; j++) {
+      for (let j = 0; j < rows; j++) {
         //Create columns
         let td = document.createElement('td');
         row.appendChild(td);

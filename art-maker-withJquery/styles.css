@@ -48,7 +48,9 @@ input[type='number'] {
   opacity: 0.5;
   text-decoration: none;
 }
-
+#error {
+  color: red;
+}
 table,
 tr,
 td {
