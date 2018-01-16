@@ -6,14 +6,23 @@ $('#submit-button').click(function(event) {
 
 //get default color from color picker
 let color = $('#color-picker').val();
+let isDown = false; // Tracks status of mouse button
+
+$(document).mousedown(function() {
+  isDown = true; // When mouse goes down, set isDown to true
+});
+
+$(document).mouseup(function() {
+  isDown = false; // When mouse goes up, set isDown to false
+});
 
 //update color
 function updateColorPicker() {
   $('#color-picker').change(function() {
-    console.log('change');
     color = $('#color-picker').val();
   });
 }
+
 //create grid
 function makeGrid() {
   let rowNum = $('#grid-cols').val();
@@ -26,23 +35,31 @@ function makeGrid() {
   e.innerHTML = '';
   //get the table
   var table = $('#pixel-canvas');
-  //Reset to empty table --- in case one already created
+  //Reset to empty table
   table.children().remove();
 
   for (var i = 0; i < rowNum; i++) {
-    //Create rows
+    //create rows
     table.append('<tr></tr>');
 
     for (var j = 0; j < colNum; j++) {
-      //Create columns
+      //create columns
       table
         .children()
         .last()
         .append('<td></td>');
     }
   }
-  //Add color to grid
-  $(table).on('click', 'td', function() {
+  //add color to grid
+  $(table).on('mousedown', 'td', function() {
+    //add color for inital click
     $(this).css('background-color', color);
+    //add color if click and move
+    $('td').mouseover(function() {
+      if (isDown) {
+        // Only change css if mouse is down
+        $(this).css({ background: color });
+      }
+    });
   });
 }
