@@ -52,9 +52,9 @@ function makeGrid() {
   }
   //add color to grid
   $(table).on('mousedown', 'td', function() {
-    //add color for inital click
+    //add color for click
     $(this).css('background-color', color);
-    //add color if click and move
+    //add color if click and hover
     $('td').mouseover(function() {
       if (isDown) {
         // Only change css if mouse is down
