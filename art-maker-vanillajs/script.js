@@ -1,10 +1,20 @@
 //set defaults
-let color = 'black',
+let color = '#383',
   rows,
   cols;
 
 //get table
 let table = document.getElementById('pixel-canvas');
+let isDown = false;
+
+//add event listeners for draw and drag function
+document.addEventListener('mousedown', function() {
+  isDown = true; // When mouse goes down, set isDown to true
+});
+
+document.addEventListener('mouseup', function() {
+  isDown = false; // When mouse goes up, set isDown to false
+});
 
 //change color to draw with
 function updateColorPicker() {
@@ -29,8 +39,14 @@ function makeGrid() {
         //Create columns
         let td = document.createElement('td');
         row.appendChild(td);
-        td.onclick = () => {
+
+        td.onmousedown = () => {
           td.style.backgroundColor = color;
+        };
+        td.onmouseover = () => {
+          if (isDown) {
+            td.style.backgroundColor = color;
+          }
         };
       }
     }
