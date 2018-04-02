@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>grid draw</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="grid">
+      <div class="input-area">
+        <div class="inputs">
+          <form>
+            <label for="grid-cols">Grid Columns:</label>
+            <input id="grid-cols" name="grid-cols" type="number" value="45" />
+            <label for="grid-rows">Grid Rows:</label>
+            <input id="grid-rows" name="grid-rows" type="number" value="35"/>
+            <input id="submit-button" class="btn" type="button" value="Submit" onclick="makeGrid()"/>
+          </form>
+          <strong><label for="color-picker">Brush Color:</label></strong>
+          <input id="color-picker" type="color"  value="#2e7c31"  onchange="updateColorPicker()"/>
+          <strong><label for="color-picker">Background:</label></strong>
+          <input id="board-color" type="color"  value="#ffffff"  onchange="updateColorBoard()"/>
+
+          <input id="toggle-lines" class="btn" value="Toggle Lines"/>
+      </div>
+    </div>
+      <div class="board">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

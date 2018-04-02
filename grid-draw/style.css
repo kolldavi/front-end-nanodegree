@@ -1,0 +1,84 @@
+:root {
+  --height: 15;
+}
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+.input-area {
+  display: flex;
+  background-color: #959595;
+  width: 20vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+label {
+  line-height: 150%;
+  font-size: 1.12em;
+  font-weight: bold;
+  margin-left: 25%;
+}
+
+input {
+  width: 80%;
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.btn {
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid black;
+  font-size: 14px;
+  line-height: 1.35;
+  border-radius: 4px;
+  background-color: #5bc0de;
+  width: 80%;
+}
+.btn:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.board {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  flex-flow: wrap;
+}
+.tile {
+  width: 100%;
+  height: calc(100% / var(--height));
+  flex-flow: wrap;
+}
+.tile-border {
+  border: 1px solid black;
+}
