@@ -1,26 +1,31 @@
 * {
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 
 #header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-size: 22px;
 }
 polygon {
   fill: yellow;
 }
 .stars {
-  padding-left: 25%;
-  padding-right: 5%;
+  padding-left: 21%;
+  padding-right: 4%;
 }
 #photo {
   width: 300px;
   height: 200px;
 }
+
 .card {
-  border: 1px solid #888;
-  width: 350px;
+  margin: auto;
+  width: 50%;
+  border: 7px solid #fc3;
+  min-width: 350px;
+  max-width: 350px;
   box-shadow: 5px 5px 2px 2px #d5d3d3;
   border-radius: 5px;
 
@@ -48,23 +53,39 @@ polygon {
     rgba(213, 235, 251, 1) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr='#ebf1f6',
-      endColorstr='#d5ebfb',
+      startColorstr="#ebf1f6",
+      endColorstr="#d5ebfb",
       GradientType=1
     ); /* IE6-9 fallback on horizontal gradient */
+  cursor: pointer;
 }
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
 .img {
   display: block;
   margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card img {
+  transition: all 0.3s ease-in-out;
 }
 .info {
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid #888;
-  width: 280px;
+  border: 2px solid #000;
+  width: 276px;
   margin: 0 auto;
   margin-top: 12px;
   margin-bottom: 12px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
 }
 span {
   font-weight: bold;
@@ -75,4 +96,7 @@ ul {
   text-align: left;
   margin: 0;
   padding: 0;
+}
+li {
+  margin-top: 1px;
 }
