@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <div class="title">
+            <h1 id="title">Survey Form</h1>
+        </div>
+        <div id="form" class="form">
+            <div class="form-title">
+                <p id="description">This is a project for a free code camp responsive web design project </p>
+            </div>
+            <div class="form-content">
+                <form id="survey-form">
+                    <div class="form-field">
+                        <label for="name-field" id="name-label">Name:</label>
+                        <input id="name" type="text" placeholder="Enter your name" required/>
+                    </div>
+                    <div class="form-field">
+                        <label for="email" id="email-label">Email:</label>
+                        <input id="email" type="email" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="form-field">
+                        <label for="age" id="number-label">Age:</label>
+                        <input id="number" type="number" placeholder="Enter your age" min="10" max="99" />
+                    </div>
+                    <div class="form-field  radio-group">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" name="gender" value="male" checked> Male
+                        <br>
+                        <input type="radio" name="gender" value="female"> Female
+                        <br>
+                        <input type="radio" name="gender" value="other"> Other
+                    </div>
+                    <div class="form-field dropdown">
+                        <label for="dropdown">What is your favoirite Programming language?</label>
+                        <select id="dropdown">
+                            <option disabled selected value>Select an option</option>
+                            <option value="php">PHP</option>
+                            <option value="javascript">Javascript</option>
+                            <option value="java">Java</option>
+                            <option value="kotlin">Kotlin</option>
+                            <option value="c#">C#</option>
+                            <option value="python">Pyton</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field  checkbox-group">
+                        <label for="learn-next">How do you style your websites?</label>
+                        <ul>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="css" />CSS
+                                </lable>
+                            </li>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="less" />Less
+                                </lable>
+                            </li>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="saas" />Saas
+                                </lable>
+                            </li>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="scss" />Scss
+                                </lable>
+                            </li>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="bootstrap" />Bootstrap
+                                </lable>
+                            </li>
+                            <li name="learn-next">
+                                <lable>
+                                    <input type="checkbox" value="other" />Other
+                                </lable>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="form-field  comments">
+                        <label for="comments">Comments:</label>
+                        <textarea placeholder="Enter any comments you have" cols="30" rows="5"></textarea>
+                    </div>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+        <div id=" footer " class="footer ">
+            By David Koller
+        </div>
+    </div>
+    <script>
+        function printInfo(e) {
+
+            alert('hello', e)
+        }
+    </script>
+</body>
+
+</html>

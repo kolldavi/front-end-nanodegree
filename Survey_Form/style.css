@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #999;
+}
+
+.grid {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header" "form" "footer";
+    grid-template-rows: 150px 1fr 50px;
+}
+
+.grid>.title {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.grid>.form {
+    justify-content: center;
+    grid-area: form;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 100%;
+}
+
+.form-title {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+}
+
+.form-field {
+    display: flex;
+    align-items: baseline;
+    margin: 10px;
+}
+
+label {
+    width: 200px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+button {
+    background-color: rgb(6, 134, 6);
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(8, 160, 8);
+}
+
+input[type='checkbox'] {
+    margin-right: 30px;
+}
+
+.grid>.footer {
+    grid-area: footer;
+    justify-self: center;
+    align-self: center;
+}
